@@ -130,6 +130,18 @@ namespace Asssignment01
 
             #endregion
 
+            #region Question11
+            /*
+             Declare an int? year = null;. Print whether it has a value, then assign it 2023 and print its value.
+             */
+
+            //int? year = null;
+            //Console.WriteLine($"Has Value?: {year != null}");
+
+            //year = 2023;
+            //Console.WriteLine($"New value: {year}");
+            #endregion
+
         }
     }
 }
