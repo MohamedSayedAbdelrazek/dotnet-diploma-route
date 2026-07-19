@@ -80,6 +80,12 @@ namespace Asssignment01
             //int priceInt = (int)price; // Explicit conversion from double to int
             #endregion
 
+            #region Question07
+            // 7.Given string pagesText = "464";, convert it into an int using the Convert class.
+            //string pagesText = "464";
+            //int pages = Convert.ToInt32(pagesText); // Convert string to int
+            #endregion
+
 
 
         }
