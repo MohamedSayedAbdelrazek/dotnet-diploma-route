@@ -149,6 +149,14 @@ namespace Asssignment01
             //Console.WriteLine($"Is reviewer null?: {reviewer == null}");
             #endregion
 
+            #region Question13
+            /*
+            13.Declare a Book? book = null;. Use ?. to safely read book.Title without crashing the program, and print the result.
+            */
+            //Book? book = null;
+            //Console.WriteLine($"Book Title: {book?.Title}");
+            #endregion
+
         }
     }
 }
