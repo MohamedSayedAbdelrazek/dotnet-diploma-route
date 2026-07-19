@@ -106,7 +106,16 @@ namespace Asssignment01
 
             #endregion
 
-            
+            #region Question09
+            /*Given int pages = 464;, convert it into a string using ToString() and print its type using
+            GetType() to prove it's now a string.*/
+
+            //int pages = 464;
+            //string pagesText = pages.ToString();
+            //Console.WriteLine(pagesText.GetType());
+            #endregion
+
+
         }
     }
 }
