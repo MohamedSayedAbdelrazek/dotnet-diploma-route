@@ -46,6 +46,27 @@ namespace Asssignment01
             int pages = 464;
             */
             #endregion
+
+            #region Question04
+            /* 4.Write code that divides 10 by 0 inside a try block, catches the exception, prints "Cannot
+            divide by zero", and then prints "Done" in a finally block.*/
+
+            //int x=10,y= 0;
+            //try
+            //{
+            //    int result = x / y;
+            //}
+            //catch (DivideByZeroException ex) {
+            //    Console.WriteLine("Cannot divide by zero");
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("An error occurred: " + ex.Message);
+            //}
+            //finally {
+            //    Console.WriteLine("Done");
+            //}
+            #endregion
         }
     }
 }
