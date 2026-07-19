@@ -30,14 +30,22 @@ namespace Asssignment01
             #endregion
 
             #region Question02
-            Book book = new Book();
-            Console.WriteLine(book.ToString());
-            Console.WriteLine(book.Equals(book));
-            Console.WriteLine(book.GetHashCode());
-            Console.WriteLine(book.GetType());
+            //Book book = new Book();
+            //Console.WriteLine(book.ToString());
+            //Console.WriteLine(book.Equals(book));
+            //Console.WriteLine(book.GetHashCode());
+            //Console.WriteLine(book.GetType());
             #endregion
 
+            #region Question03
+            /*
+             Look at the line below. Is it a compile-time error, a runtime error, or a logical error? Fix it.
+            int pages = "464";
 
+            Compile-time error — you can't put text (string) into an int variable.
+            int pages = 464;
+            */
+            #endregion
         }
     }
 }
