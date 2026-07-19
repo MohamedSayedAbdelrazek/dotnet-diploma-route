@@ -2,6 +2,12 @@
 
 namespace Asssignment01
 {
+    internal class Book
+    {
+        public string Title;
+        public int Pages;
+    }
+
     internal class Program
     {
         static void Main(string[] args)
@@ -22,6 +28,16 @@ namespace Asssignment01
             //
 
             #endregion
+
+            #region Question02
+            Book book = new Book();
+            Console.WriteLine(book.ToString());
+            Console.WriteLine(book.Equals(book));
+            Console.WriteLine(book.GetHashCode());
+            Console.WriteLine(book.GetType());
+            #endregion
+
+
         }
     }
 }
