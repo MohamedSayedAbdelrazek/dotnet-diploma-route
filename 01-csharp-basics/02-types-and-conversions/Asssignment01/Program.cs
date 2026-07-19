@@ -142,6 +142,13 @@ namespace Asssignment01
             //Console.WriteLine($"New value: {year}");
             #endregion
 
+            #region Question12
+            /* Declare a string? reviewer = null;. Print whether it is null.*/
+
+            //string? reviewer = null;
+            //Console.WriteLine($"Is reviewer null?: {reviewer == null}");
+            #endregion
+
         }
     }
 }
