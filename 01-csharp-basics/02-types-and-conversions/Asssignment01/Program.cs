@@ -1,4 +1,6 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Drawing;
+using System.Runtime.Intrinsics.X86;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Asssignment01
 {
@@ -86,8 +88,25 @@ namespace Asssignment01
             //int pages = Convert.ToInt32(pagesText); // Convert string to int
             #endregion
 
+            #region Question08
+            /* 8.Given string yearText = "2023";, convert it using int.Parse(). Then given string badText =
+            "abc";, use int.TryParse() to safely try converting it, and print "Invalid number" if it fails.*/
 
+            //string yearText = "2023";
+            //int year = int.Parse(yearText); // Convert string to int using Parse method
+            //string badText ="abc";
+            //if (int.TryParse(badText, out int result))
+            //{
+            //    Console.WriteLine($"The converted number: {result}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid number");
+            //}
 
+            #endregion
+
+            
         }
     }
 }
