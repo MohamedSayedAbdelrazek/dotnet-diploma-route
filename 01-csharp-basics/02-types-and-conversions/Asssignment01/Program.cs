@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography.X509Certificates;
+using System.Xml.Linq;
 
 namespace Asssignment01
 {
@@ -166,6 +167,15 @@ namespace Asssignment01
             //title ??= "Untitled";
             #endregion
 
+            #region Question15
+            /*
+             Given string? name = "Ahmed"; (you are sure it's not null here), assign it to a non-nullable
+                string confirmedName using the ! operator.
+             */
+            //string? name = "Mohamed";
+           //string confirmedName = name!;
+
+            #endregion
         }
     }
 }
