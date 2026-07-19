@@ -74,6 +74,13 @@ namespace Asssignment01
             //double pagesDouble = pages; // Implicit conversion from int to double
             #endregion
 
+            #region Question06
+            //6.Declare a double price = 49.99; then convert it into an int using a cast.
+            //double price = 44.99;
+            //int priceInt = (int)price; // Explicit conversion from double to int
+            #endregion
+
+
 
         }
     }
