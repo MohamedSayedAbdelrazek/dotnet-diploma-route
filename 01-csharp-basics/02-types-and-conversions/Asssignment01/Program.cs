@@ -116,6 +116,20 @@ namespace Asssignment01
             #endregion
 
 
+            #region Question10
+            /*
+             10.Declare int copies = 100;. Box it into an object variable, then unbox it back into a new int
+             variable, and print both.
+             */
+            //int copies = 100;
+            //object boxedCopies = copies; // Boxing
+            //int unboxedCopies = (int)boxedCopies; // Unboxing
+            //Console.WriteLine($"Original: {copies}");
+            //Console.WriteLine($"Boxed: {boxedCopies}");
+            //Console.WriteLine($"Unboxed: {unboxedCopies}");
+
+            #endregion
+
         }
     }
 }
