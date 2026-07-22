@@ -86,6 +86,15 @@ namespace Asssignment02
             //Console.WriteLine($"Book: {title}, Pages: {pages}");
 
             #endregion
+
+            #region Q7
+            /* Build the same sentence again, but using string.Format() */
+
+            //string title = "Clean Code";
+            //int pages = 464;
+
+            //Console.WriteLine(String.Format("Book: {0}, Pages: {1}", title, pages));
+            #endregion
         }
     }
 }
