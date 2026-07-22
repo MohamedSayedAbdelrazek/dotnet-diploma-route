@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Channels;
 
 namespace Asssignment02
@@ -34,6 +35,21 @@ namespace Asssignment02
             //Console.WriteLine(ReferenceEquals(s01,s02)); // true because of string interning in C#
 
             #endregion
+
+            #region Q3
+
+            /*
+              Create a StringBuilder, Append() the text "Book List", then Append() " - Updated" onto the same
+               object. Print the final result.
+             */
+
+            //StringBuilder sb = new ();
+            //sb.Append("Book List");
+            //sb.Append(" - Updated");
+            //Console.WriteLine(sb.ToString());
+            #endregion
+
+
         }
     }
 }
