@@ -24,7 +24,16 @@ namespace Asssignment02
 
             #endregion
 
+            #region Q2
+            /*
+             * Declare two separate string variables, both set to the literal "Clean Code". Use ReferenceEquals()
+               to check if they point to the same object in memory.
+             */
 
+            //string s01 = "Clean Code", s02 = "Clean Code";
+            //Console.WriteLine(ReferenceEquals(s01,s02)); // true because of string interning in C#
+
+            #endregion
         }
     }
 }
