@@ -141,19 +141,19 @@ namespace Asssignment02
             "Clean Code", "Nice pick!" if it's "Refactoring", and "Never heard of it" for anything else.
              */
 
-            string title = "Refactoring";
+            //string title = "Refactoring";
 
-            switch (title) {
-                case "Clean Code":
-                    Console.WriteLine("Great Choice!");
-                    break;
-                case "Refactoring":
-                    Console.WriteLine("Nice Pick!");
-                    break;
-                default:
-                    Console.WriteLine("Never heard of it");
-                    break;
-            }
+            //switch (title) {
+            //    case "Clean Code":
+            //        Console.WriteLine("Great Choice!");
+            //        break;
+            //    case "Refactoring":
+            //        Console.WriteLine("Nice Pick!");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Never heard of it");
+            //        break;
+            //}
             #endregion
 
             #region Q11
@@ -163,13 +163,21 @@ namespace Asssignment02
             variable sizeLabel (same rule as question 8: long if pages > 300).
              */
 
-           //int pages = 464;
-           //string sizeLabel = pages > 300 ? "Long Book" : "Short Book";
-           //Console.WriteLine(sizeLabel);
+            //int pages = 464;
+            //string sizeLabel = pages > 300 ? "Long Book" : "Short Book";
+            //Console.WriteLine(sizeLabel);
 
             #endregion
 
+            #region Q12
+            string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
 
+            for(int i=0; i<books.Length; i++)
+            {
+                Console.WriteLine($"{i+1}: {books[i]}");
+            }
+
+            #endregion
 
         }
     }
