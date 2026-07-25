@@ -39,6 +39,22 @@
             //PrintBookTitle("Clean Code");
 
             #endregion
+
+            #region Q5
+
+            /*
+             Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+                int pages = 400; and print pages afterward. What do you expect to see, and why?
+             */
+
+            //int pages = 400;
+            //AddBonusPages(pages);
+            //Console.WriteLine($"Total pages: {pages}");
+            
+            // pass by value, so the original variable is not modified
+            // The output will be 400 because the AddBonusPages method does not modify the original variable, it only modifies a copy of it.
+
+            #endregion
         }
 
         public static void PrintWelcomeMessage() {
@@ -47,6 +63,10 @@
 
         public static void PrintBookTitle(string title) {
             Console.WriteLine($"Book Title: {title}");
+        }
+
+        public static void AddBonusPages(int pages) {
+            pages += 50;
         }
     }
 }
