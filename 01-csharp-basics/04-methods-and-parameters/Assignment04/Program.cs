@@ -50,10 +50,23 @@
             //int pages = 400;
             //AddBonusPages(pages);
             //Console.WriteLine($"Total pages: {pages}");
-            
+
             // pass by value, so the original variable is not modified
             // The output will be 400 because the AddBonusPages method does not modify the original variable, it only modifies a copy of it.
 
+            #endregion
+
+            #region Q6
+            /*
+             Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+                with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward. What do you expect to
+                see, and why?
+             */
+
+            //double[] prices = { 25.5, 40.0 };
+            //ApplyDiscount(prices);
+            //Console.WriteLine($"First price after discount: {prices[0]}");
+            // The output will be 20.5 because the ApplyDiscount method modifies the first element of the prices array.
             #endregion
         }
 
@@ -67,6 +80,10 @@
 
         public static void AddBonusPages(int pages) {
             pages += 50;
+        }
+        public static void ApplyDiscount(double[] prices) {
+            prices[0] -= 5;
+
         }
     }
 }
