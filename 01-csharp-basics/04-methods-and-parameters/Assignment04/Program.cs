@@ -68,6 +68,20 @@
             //Console.WriteLine($"First price after discount: {prices[0]}");
             // The output will be 20.5 because the ApplyDiscount method modifies the first element of the prices array.
             #endregion
+
+            #region Q7
+            /*
+             Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+                Call it and print pages afterward. How is the result different from question 5?
+             */
+
+            //int pages = 400;
+            //AddBonusPagesByRef(ref pages);
+            //Console.WriteLine($"Total pages: {pages}");
+
+            // The output will be 450 because the AddBonusPagesByRef method modifies the original variable Because it is passed by reference.
+            #endregion
+
         }
 
         public static void PrintWelcomeMessage() {
@@ -84,6 +98,10 @@
         public static void ApplyDiscount(double[] prices) {
             prices[0] -= 5;
 
+        }
+
+        public static void AddBonusPagesByRef(ref int pages) { 
+            pages += 50;
         }
     }
 }
