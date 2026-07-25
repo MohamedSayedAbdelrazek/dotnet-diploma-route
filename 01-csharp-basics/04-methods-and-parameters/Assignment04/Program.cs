@@ -94,6 +94,22 @@
             //Console.WriteLine($"Length of prices array: {prices.Length}");
             #endregion
 
+            #region Q9
+            /*
+             Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+                price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0. Call it and print the price if found
+             */
+
+            //string title = "Clean Code";
+            //if (TryGetPrice(title, out double price)) {
+            //    Console.WriteLine($"Price of {title}: {price}");
+            //} else {
+            //    Console.WriteLine($"Book not found: {title}");
+            //}
+            #endregion
+
+
+
         }
 
         public static void PrintWelcomeMessage() {
@@ -118,6 +134,17 @@
 
         public static void ReplaceArray(ref double[] prices) { 
             prices = new double[] { 10.0, 12.5, 15 };
+        }
+
+        public static bool TryGetPrice(string title, out double price) {
+            switch (title) { 
+                case "Clean Code":
+                    price = 25.5;
+                    return true;
+                default:
+                    price = 0;
+                    return false;
+            }
         }
     }
 }
