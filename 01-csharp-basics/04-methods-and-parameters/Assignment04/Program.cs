@@ -129,6 +129,15 @@ namespace Assignment04
 
             //PrintBookInfo(pages: 352,title:"Clean Code");
             #endregion
+
+            #region Q12
+            /*
+             Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+                Call it with three book titles.
+             */
+
+            PrintAllTitles("C#", "PHP", "Java");
+            #endregion
         }
 
         public static void PrintWelcomeMessage() {
@@ -170,5 +179,12 @@ namespace Assignment04
                 Console.WriteLine($"Book Title: {title}, Pages: {pages}");
         }
 
+        public static void PrintAllTitles(params string[] titles)
+        {
+            foreach (var title in titles)
+            {
+                Console.WriteLine(title);
+            }
+        }
     }
 }
