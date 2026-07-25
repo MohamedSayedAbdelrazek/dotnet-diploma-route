@@ -82,6 +82,18 @@
             // The output will be 450 because the AddBonusPagesByRef method modifies the original variable Because it is passed by reference.
             #endregion
 
+            #region Q8
+            /*
+             Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+                new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length
+                afterward.
+             */
+
+            //double[] prices = { 25.5, 40.0 };
+            //ReplaceArray(ref prices);
+            //Console.WriteLine($"Length of prices array: {prices.Length}");
+            #endregion
+
         }
 
         public static void PrintWelcomeMessage() {
@@ -102,6 +114,10 @@
 
         public static void AddBonusPagesByRef(ref int pages) { 
             pages += 50;
+        }
+
+        public static void ReplaceArray(ref double[] prices) { 
+            prices = new double[] { 10.0, 12.5, 15 };
         }
     }
 }
