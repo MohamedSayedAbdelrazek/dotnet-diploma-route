@@ -71,7 +71,17 @@
             //Console.WriteLine($"Genre value after casting: {genreValue}");
             #endregion
 
-            
+            #region Q7
+            /*
+             Given Genre genre = Genre.Fiction;
+            , convert it into a string using ToString() and print it.
+             */
+
+            //Genre genre = Genre.Fiction;
+            //Console.WriteLine(genre.ToString());
+            #endregion
+
+
         }
     }
 }
