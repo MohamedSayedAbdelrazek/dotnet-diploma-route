@@ -93,7 +93,16 @@
             //Console.WriteLine($"Parsed Genre: {parsedGenre}");
             #endregion
 
+            #region Q9
+            /*
+             Given string genreText = "Mystery"; (not a valid Genre value), use Enum.TryParse() to
+                attempt the conversion. Print "Unknown genre" if it fails.
+             */
 
+            //string genreText = "Fiction";
+            //bool isParsed = Enum.TryParse(genreText, out Genre parsedGenre);
+            //Console.WriteLine(isParsed? $"Parsed Genre: {parsedGenre}" : "Unknown genre");
+            #endregion
         }
     }
 }
