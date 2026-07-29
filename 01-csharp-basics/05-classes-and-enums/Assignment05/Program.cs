@@ -27,6 +27,16 @@
             // This line will compile successfully because 'copiesInStock' is an internal field and can be accessed from all classes in the same assembly.
             #endregion
 
+            #region Q3
+            /*
+             Add a public string Title; field to Book. Set it and print it from Main.
+             */
+
+            //Book book = new Book();
+            //book.Title = "C#";
+            //Console.WriteLine($"Book Title: {book.Title}");
+            #endregion
+
         }
     }
 }
