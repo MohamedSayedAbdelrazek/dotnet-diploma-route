@@ -59,6 +59,19 @@
             //Console.WriteLine($"Genre.Science: {(int)Genre.Science}");
 
             #endregion
+
+            #region Q6
+            /*
+             Given int genreNumber = 1;
+            , cast it into a Genre value and print the result.
+             */
+
+            //int genreNumber = 1;
+            //Genre genreValue = (Genre)genreNumber;
+            //Console.WriteLine($"Genre value after casting: {genreValue}");
+            #endregion
+
+            
         }
     }
 }
