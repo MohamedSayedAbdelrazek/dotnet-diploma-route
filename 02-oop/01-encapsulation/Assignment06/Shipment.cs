@@ -13,7 +13,26 @@ namespace Assignment06
         private string description;
         private double weight;
         private double deliveryFee;
-       
+
+        public Shipment(string trackingCode)
+        {
+            this.trackingCode = trackingCode;
+            description = "Unknown";
+            weight = 1;
+            deliveryFee = 50;
+            Destination = default;
+          
+        }
+
+        public Shipment(string trackingCode,string description,double weight, double deliveryFee, DeliveryAddress destination)
+        {
+            this.trackingCode = trackingCode;
+            this.description = description;
+            this.weight = weight;
+            this.deliveryFee = deliveryFee;
+            Destination = destination;
+        }
+
         public string TrackingCode => trackingCode; 
 
         public string Description
