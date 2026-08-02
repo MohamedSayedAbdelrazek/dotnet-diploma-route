@@ -57,7 +57,22 @@ namespace Assignment06
 
             #endregion
 
+            #region Q3
 
+            /*
+             Create one DeliveryAddress value, copy it into a second variable, modify the copy, and print both values to prove that
+                the original did not change.
+             */
+
+            //DeliveryAddress d1 = new DeliveryAddress();
+            //DeliveryAddress d2 = d1;
+            //d2.City = "Cairo";
+            //d2.Street = "Tahreer";
+            //d2.BuildingNumber = 1;
+
+            //Console.WriteLine($"d1 Information: {d1.GetFullAddress()}");
+            //Console.WriteLine($"d2 Information: {d2.GetFullAddress()}");
+            #endregion
 
 
 
