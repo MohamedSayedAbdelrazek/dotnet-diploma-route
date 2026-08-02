@@ -72,5 +72,17 @@ namespace Assignment06
 
         public DeliveryAddress Destination { get; set; }
         public double EstimatedCost  => DeliveryFee + (Weight * 5);
+
+        public void UpdateDeliveryFee(double newFee) {
+            if (newFee > 0)
+                deliveryFee = newFee;
+        }
+
+        public void PrintShipment() {
+            Console.WriteLine(
+                $"Tracking Code: {trackingCode}\n Description: {Description}\n Weight: {weight}\n DeliveryFee: {deliveryFee}\n Destination: {Destination}\n EstimatedCost: {EstimatedCost}"
+                );
+        }
+
     }
 }

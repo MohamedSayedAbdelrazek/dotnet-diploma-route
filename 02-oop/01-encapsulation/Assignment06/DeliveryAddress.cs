@@ -21,5 +21,10 @@ namespace Assignment06
             return $"{City}, {Street}, {BuildingNumber}";
         }
 
+        public override string ToString()
+        {
+            return $"{City}, {Street}, {BuildingNumber}";
+        }
+
     }
 }
