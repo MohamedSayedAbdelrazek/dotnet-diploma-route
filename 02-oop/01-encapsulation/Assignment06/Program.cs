@@ -72,7 +72,97 @@ namespace Assignment06
             //Console.WriteLine($"d2 Information: {d2.GetFullAddress()}");
             #endregion
 
+            // All other questions are solved inside its files.
 
+            #region Last Part- Last Ques
+            /*
+             a) Create a DeliveryCenter object.
+                b) Ask the user to enter data for three shipments.
+                c) Create each Shipment and add it to the DeliveryCenter.
+                d) Print the three shipments using the integer indexer.
+                e) Ask the user to enter a tracking code.
+                f) Search for the shipment using the string indexer.
+                g) Print the shipment when found, or print "Shipment not found."
+                h) Demonstrate the DeliveryAddress struct copy behavior.
+             
+             */
+            DeliveryCenter deliveryCenter = new DeliveryCenter(3);
+            // take the data
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine($"Enter Shipment {i + 1} data: ");
+                Console.WriteLine("TrackingCode: ");
+                string? trackingCode = Console.ReadLine();
+
+
+                Console.WriteLine("Description: ");
+                string description = Console.ReadLine();
+
+                Console.WriteLine("Weight: ");
+                double weight = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Delivery Fee: ");
+                double deliveryFee = double.Parse(Console.ReadLine());
+
+                DeliveryAddress deliveryAddress = new DeliveryAddress();
+                Console.WriteLine("City: ");
+                deliveryAddress.City = Console.ReadLine();
+
+                Console.WriteLine("Street: ");
+                deliveryAddress.Street = Console.ReadLine();
+
+                Console.WriteLine("Building Number: ");
+                deliveryAddress.BuildingNumber = int.Parse(Console.ReadLine());
+
+                Shipment tempShipment = new Shipment(trackingCode, description, weight, deliveryFee, deliveryAddress);
+
+                bool added = deliveryCenter.AddShipment(tempShipment);
+                if (!added)
+                {
+                    Console.WriteLine("Delivery center is full, shipment was not added.");
+                }
+            }
+
+
+            // d) print all three shipments using the integer indexer
+            Console.WriteLine("\n--- All Shipments ---");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine(deliveryCenter[i]);
+            }
+
+            // e) ask for a tracking code
+            Console.WriteLine("\nEnter a tracking code to search: ");
+            string? searchCode = Console.ReadLine();
+
+            // f) search using the string indexer
+            Shipment? found = deliveryCenter[searchCode];
+
+
+            if (found != null)
+            {
+                Console.WriteLine("Shipment found: ");
+                Console.WriteLine(found);
+            }
+            else
+            {
+                Console.WriteLine("Shipment not found.");
+            }
+
+            // h) demonstrate DeliveryAddress struct copy behavior
+            Console.WriteLine("\n-Struct Copy-");
+            if (deliveryCenter[0] != null)
+            {
+                DeliveryAddress originalAddress = deliveryCenter[0].Destination;
+                DeliveryAddress copiedAddress = originalAddress;             // struct: this copies by VALUE
+
+                copiedAddress.City = "ModifiedCityName";
+
+                Console.WriteLine($"Original address city: {originalAddress.City}");
+                Console.WriteLine($"Copied address city (after modification): {copiedAddress.City}");
+                Console.WriteLine("Notice the original is unchanged — structs are copied by value, not by reference.");
+            } 
+            #endregion
 
         }
     }
