@@ -58,12 +58,10 @@ namespace Assignment06
             #endregion
 
             #region Q3
-
             /*
              Create one DeliveryAddress value, copy it into a second variable, modify the copy, and print both values to prove that
                 the original did not change.
              */
-
             //DeliveryAddress d1 = new DeliveryAddress();
             //DeliveryAddress d2 = d1;
             //d2.City = "Cairo";
