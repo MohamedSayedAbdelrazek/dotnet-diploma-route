@@ -1,4 +1,4 @@
-﻿namespace Assignment06
+﻿namespace G_NET68_OOP_Assignment_2
 {
     internal struct DeliveryAddress
     {

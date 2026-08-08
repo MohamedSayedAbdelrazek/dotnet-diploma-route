@@ -1,4 +1,4 @@
-﻿namespace Assignment06
+﻿namespace G_NET68_OOP_Assignment_2
 {
     internal class Shipment
     {
@@ -66,7 +66,7 @@
         }
 
         public DeliveryAddress Destination { get; set; }
-        public double EstimatedCost => DeliveryFee + (Weight * 5);
+        public virtual double EstimatedCost => DeliveryFee + (Weight * 5);
 
         public void UpdateDeliveryFee(double newFee)
         {
