@@ -77,8 +77,9 @@
         public void PrintShipment()
         {
             Console.WriteLine(
-                $"Tracking Code: {trackingCode}\n Description: {Description}\n Weight: {weight}\n DeliveryFee: {deliveryFee}\n Destination: {Destination}\n EstimatedCost: {EstimatedCost}"
+                $"\nTracking Code: {trackingCode}\n Description: {Description}\n Weight: {weight}\n DeliveryFee: {deliveryFee}\n Destination: {Destination}\n EstimatedCost: {EstimatedCost}"
                 );
+            Console.WriteLine("-------------------------------------------------");
         }
 
     }

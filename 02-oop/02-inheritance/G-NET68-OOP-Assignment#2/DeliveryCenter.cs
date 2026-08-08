@@ -4,7 +4,7 @@
     {
         private Shipment[] shipments;
         public int Size { get; }
-        public string CenterName { get; set; } 
+        public string ?CenterName { get; set; } 
         public DeliveryCenter(int size=20)
         {
             Size = size;
