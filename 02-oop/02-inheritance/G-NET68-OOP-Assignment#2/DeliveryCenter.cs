@@ -4,7 +4,8 @@
     {
         private Shipment[] shipments;
         public int Size { get; }
-        public DeliveryCenter(int size)
+        public string CenterName { get; set; } 
+        public DeliveryCenter(int size=20)
         {
             Size = size;
             shipments = new Shipment[size];
@@ -64,5 +65,22 @@
             }
             return false;
         }
-    }
+
+        public bool RemoveShipment(string trackingCode) {
+            for (int i = 0; i < shipments.Length; i++) {
+                if (shipments[i]?.TrackingCode == trackingCode) { 
+                    shipments[i] = null; // Remove the shipment
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void PrintAllShipments() { 
+            for(int i=0;i<shipments.Length;i++)
+                shipments[i]?.PrintShipment();
+        }
+
+
+}
 }
