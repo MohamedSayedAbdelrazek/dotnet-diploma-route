@@ -24,7 +24,23 @@
             //large structs copied on the stack can cause stack overflow
             #endregion
 
+            #region Q2
+            /*
+             a) Which class is the parent class?
+                => Shipment
 
+            b) Which class is the child class? 
+                => ExpressShipment
+
+            c) What members are inherited by ExpressShipment? 
+                => TrackingCode
+
+            d) Why is inheritance better than duplicating the same code in multiple classes?
+                Maintainability => fix a bug once in the parent class, not in every copy
+                Consistency => all subclasses behave the same way
+                Readability 
+             */
+            #endregion
 
         }
     }
