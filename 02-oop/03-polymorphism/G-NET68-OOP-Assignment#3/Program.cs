@@ -13,6 +13,15 @@
              */
 
             #endregion
+
+            #region Part01-Q1-B
+            /*
+             b) What is the difference between Static Binding and Dynamic Binding?
+             - Static Binding is resolved by the compiler at compile time. It is based on the reference type and is used with non-virtual methods.
+
+             - Dynamic Binding is resolved at runtime by the CLR. It is based on the actual object type and is used with virtual/override methods.
+             */
+            #endregion
         }
     }
 }
