@@ -83,10 +83,11 @@ namespace G_NET68_OOP_Assignment_3
             return false;
         }
 
+        //More simple
         public void PrintAllShipments()
         {
-            for (int i = 0; i < shipments.Length; i++)
-                shipments[i]?.PrintShipment();
+            foreach (Shipment shipment in shipments)
+                shipment?.PrintShipment();
         }
 
         public Driver Driver { get; set; }
