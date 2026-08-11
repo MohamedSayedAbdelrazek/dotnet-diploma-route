@@ -6,8 +6,8 @@ namespace G_NET68_OOP_Assignment_3
 {
     internal class InternationalShipment : Shipment
     {
-        public InternationalShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination, string destinationCountry, double customFee)
-             : base(trackingCode, description, weight, deliveryFee, destination)
+        public InternationalShipment(string trackingCode, string description, double weight, double deliveryFee, string city,string street,int buildingNumber, string destinationCountry, double customFee)
+             : base(trackingCode, description, weight, deliveryFee, city,street,buildingNumber)
         {
             CustomsFee = customFee;
             DestinationCountry = destinationCountry;
@@ -43,6 +43,10 @@ namespace G_NET68_OOP_Assignment_3
         {
             base.PrintShipment();
             Console.WriteLine($"Destination country: {DestinationCountry}\n Custom Fee: {CustomsFee}");
+        }
+
+        public virtual void GenerateCustomsReport() {
+        
         }
     }
 
