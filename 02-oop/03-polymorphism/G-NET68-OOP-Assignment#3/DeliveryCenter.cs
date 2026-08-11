@@ -89,7 +89,7 @@ namespace G_NET68_OOP_Assignment_3
                 shipments[i]?.PrintShipment();
         }
 
-
+        public Driver Driver { get; set; }
     }
 
 }

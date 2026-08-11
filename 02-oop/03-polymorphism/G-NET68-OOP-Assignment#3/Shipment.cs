@@ -22,13 +22,13 @@ namespace G_NET68_OOP_Assignment_3
 
         }
 
-        public Shipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination)
+        public Shipment(string trackingCode, string description, double weight, double deliveryFee, string city, string street, int buldingNumber)
         {
             this.trackingCode = trackingCode;
             this.description = description;
             this.weight = weight;
             this.deliveryFee = deliveryFee;
-            Destination = destination;
+            Destination = new DeliveryAddress(city,street,buldingNumber);
         }
 
         public string TrackingCode => trackingCode;
@@ -69,7 +69,7 @@ namespace G_NET68_OOP_Assignment_3
             }
         }
 
-        public DeliveryAddress Destination { get; set; }
+        public DeliveryAddress Destination { get; }
         public virtual double EstimatedCost => DeliveryFee + (Weight * 5);
 
         public void UpdateDeliveryFee(double newFee)

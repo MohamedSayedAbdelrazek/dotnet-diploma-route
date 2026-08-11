@@ -17,6 +17,13 @@ namespace G_NET68_OOP_Assignment_3
             BuildingNumber = 0;
         }
 
+        public DeliveryAddress(string city,string street,int buildinNumber)
+        {
+            City = city;
+            Street = street;
+            BuildingNumber = buildinNumber;
+        }
+
         public string GetFullAddress()
         {
             return $"{City}, {Street}, {BuildingNumber}";
