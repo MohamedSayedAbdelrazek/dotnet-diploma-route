@@ -78,12 +78,20 @@ namespace G_NET68_OOP_Assignment_3
                 deliveryFee = newFee;
         }
 
-        public void PrintShipment()
+        public virtual void PrintShipment()
         {
             Console.WriteLine(
                 $"\nTracking Code: {trackingCode}\n Description: {Description}\n Weight: {weight}\n DeliveryFee: {deliveryFee}\n Destination: {Destination}\n EstimatedCost: {EstimatedCost}"
                 );
             Console.WriteLine("-------------------------------------------------");
+        }
+
+        public void UpdateWeight(double weight){
+            Weight = weight;
+        }
+
+        public void UpdateWeight(double weight, double extraPackingWeight) {
+            Weight = weight + extraPackingWeight;
         }
 
     }
