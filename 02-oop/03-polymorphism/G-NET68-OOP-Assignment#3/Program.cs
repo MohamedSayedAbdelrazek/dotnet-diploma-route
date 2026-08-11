@@ -22,6 +22,24 @@
              - Dynamic Binding is resolved at runtime by the CLR. It is based on the actual object type and is used with virtual/override methods.
              */
             #endregion
+
+            #region Part01-Q2-A&B&C
+            /*
+             a) What is the purpose of the sealed keyword when applied to a class?
+            - It means that the class cannot be inherited by any other class.
+             */
+
+            /*
+             b) What is the difference between a sealed class and a sealed method?
+            - A sealed class cannot be inherited by any other class.
+            - A sealed method cannot be overridden by any derived class.
+             */
+
+            /*
+             c) Can a sealed method be overridden? Why?
+            No, a sealed method cannot be overridden because the sealed keyword prevents further overriding in derived classes.
+             */
+            #endregion
         }
     }
 }
