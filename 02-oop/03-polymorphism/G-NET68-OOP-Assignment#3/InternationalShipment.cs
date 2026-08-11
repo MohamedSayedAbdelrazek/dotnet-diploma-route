@@ -38,7 +38,12 @@ namespace G_NET68_OOP_Assignment_3
             }
         }
         public override double EstimatedCost => base.EstimatedCost + CustomsFee;
-  
+
+        public override void PrintShipment()
+        {
+            base.PrintShipment();
+            Console.WriteLine($"Destination country: {DestinationCountry}\n Custom Fee: {CustomsFee}");
+        }
     }
 
 }
