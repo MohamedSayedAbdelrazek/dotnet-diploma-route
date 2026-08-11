@@ -7,7 +7,7 @@ namespace G_NET68_OOP_Assignment_3
     internal class InternationalShipment : Shipment
     {
         public InternationalShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination, string destinationCountry, double customFee)
-            : base(trackingCode, description, weight, deliveryFee, destination)
+             : base(trackingCode, description, weight, deliveryFee, destination)
         {
             CustomsFee = customFee;
             DestinationCountry = destinationCountry;
