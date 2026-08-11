@@ -6,8 +6,8 @@ namespace G_NET68_OOP_Assignment_3
 {
     internal class ExpressShipment : Shipment
     {
-        public ExpressShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination, double extraFee)
-             : base(trackingCode, description, weight, deliveryFee, destination)
+        public ExpressShipment(string trackingCode, string description, double weight, double deliveryFee,string city,string street,int buildingNumber, double extraFee)
+             : base(trackingCode, description, weight, deliveryFee,city,street,buildingNumber)
         {
             ExtraFee = extraFee;
         }

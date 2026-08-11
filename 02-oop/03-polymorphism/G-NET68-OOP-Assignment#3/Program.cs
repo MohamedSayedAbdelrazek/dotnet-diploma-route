@@ -1,4 +1,6 @@
-﻿namespace G_NET68_OOP_Assignment_3
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace G_NET68_OOP_Assignment_3
 {
     internal class Program
     {
@@ -40,8 +42,58 @@
             No, a sealed method cannot be overridden because the sealed keyword prevents further overriding in derived classes.
              */
             #endregion
+            //a
+            Driver driver = new Driver(10, "Mohamed Sayed", "01000000001");
 
+            //b
+            DeliveryCenter deliveryCenter = new DeliveryCenter(3);
 
+            //c
+            deliveryCenter.Driver = driver;
+
+            //d
+            StandardShipment standardShipment = new StandardShipment("SH01", "standard shipment", 5, 100, "Cairo", "Elshaheed", 15);
+
+            //e
+            ExpressShipment expressShipment = new ExpressShipment("SH02", "standard shipment", 5, 100, "Cairo", "Elshaheed", 15, 50);
+
+            //f
+            InternationalShipment internationalShipment = new InternationalShipment("SH03", "standard shipment", 5, 100, "Cairo", "Elshaheed", 15, "Egypt", 50);
+
+            //g
+            deliveryCenter.AddShipment(standardShipment);
+            deliveryCenter.AddShipment(expressShipment);
+            deliveryCenter.AddShipment(internationalShipment);
+
+            //h
+            deliveryCenter.PrintAllShipments();
+
+            //i
+            DeliveryHelper.PrintShipmentDetails(standardShipment);
+            DeliveryHelper.PrintShipmentDetails(expressShipment);
+            DeliveryHelper.PrintShipmentDetails(internationalShipment);
+
+            //j
+            Console.WriteLine("Updating Weight...");
+            standardShipment.UpdateWeight(10);
+            Console.WriteLine($"Standard Weight: {standardShipment.Weight}");
+            expressShipment.UpdateWeight(10, 2);
+            Console.WriteLine($"Express Weight: {expressShipment.Weight}");
+
+            //k
+            Shipment[] shipments = {
+                standardShipment, expressShipment, internationalShipment
+            };
+
+            foreach (Shipment shipment in shipments)
+            {
+                shipment.PrintShipment();
+            }
+
+            //l
+            // CompletedShipment is sealed, so it cannot be inherited.
+            // PriorityInternationalShipment.GenerateCustomsReport() is sealed,
+            // so further derived classes cannot override it.
         }
     }
 }
