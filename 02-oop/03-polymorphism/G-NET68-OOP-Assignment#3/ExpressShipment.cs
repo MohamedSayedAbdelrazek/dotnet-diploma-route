@@ -25,8 +25,6 @@ namespace G_NET68_OOP_Assignment_3
             }
 
         }
-
-
-        public override double EstimatedCost => base.EstimatedCost + ExtraFee;
+        public override double EstimatedCost => base.EstimatedCost+ExtraFee;
     }
 }

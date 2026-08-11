@@ -37,8 +37,8 @@ namespace G_NET68_OOP_Assignment_3
                     throw new ArgumentException("Value must be non-negative number");
             }
         }
-
         public override double EstimatedCost => base.EstimatedCost + CustomsFee;
+  
     }
 
 }
