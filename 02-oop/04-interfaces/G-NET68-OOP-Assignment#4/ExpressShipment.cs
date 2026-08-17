@@ -4,7 +4,7 @@ using System.Text;
 
 namespace G_NET68_OOP_Assignment_4
 {
-    internal class ExpressShipment : Shipment
+    internal class ExpressShipment : Shipment, ITrackable
     {
         public ExpressShipment(string trackingCode, string description, double weight, double deliveryFee, string city, string street, int buildingNumber, double extraFee)
              : base(trackingCode, description, weight, deliveryFee, city, street, buildingNumber)
@@ -26,6 +26,11 @@ namespace G_NET68_OOP_Assignment_4
 
         }
         public override double EstimatedCost => DeliveryFee + (Weight * 5)+ExtraFee;
+
+        public string GetTrackingStatus()
+        {
+            return "Out for Delivery.";
+        }
 
         public override void PrintShipment()
         {

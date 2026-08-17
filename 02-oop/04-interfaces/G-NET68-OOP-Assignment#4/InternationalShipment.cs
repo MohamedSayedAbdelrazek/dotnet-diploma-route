@@ -4,7 +4,7 @@ using System.Text;
 
 namespace G_NET68_OOP_Assignment_4
 {
-    internal class InternationalShipment : Shipment
+    internal class InternationalShipment : Shipment,ITrackable
     {
         public InternationalShipment(string trackingCode, string description, double weight, double deliveryFee, string city, string street, int buildingNumber, string destinationCountry, double customFee)
              : base(trackingCode, description, weight, deliveryFee, city, street, buildingNumber)
@@ -52,6 +52,11 @@ namespace G_NET68_OOP_Assignment_4
         public virtual void GenerateCustomsReport()
         {
 
+        }
+
+        public string GetTrackingStatus()
+        {
+            return "Ready";
         }
     }
 
