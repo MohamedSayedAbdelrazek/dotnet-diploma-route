@@ -91,6 +91,19 @@ namespace G_NET68_OOP_Assignment_4
         }
 
         public Driver Driver { get; set; }
+
+
+        public void PrintTrackingStatuses() {
+            foreach(ITrackable shipment in shipments)
+            {
+                Console.WriteLine(shipment.GetTrackingStatus());
+            }  
+        }
+        public void PrintInsuranceValues() {
+            foreach (IInsurable shipment in shipments) {
+                Console.WriteLine(shipment.CalculateInsurance());
+            }
+        }
     }
 
 }
