@@ -4,7 +4,7 @@ using System.Text;
 
 namespace G_NET68_OOP_Assignment_4
 {
-    internal class Shipment
+    internal abstract class Shipment
     {
 
         private string trackingCode;
@@ -70,7 +70,7 @@ namespace G_NET68_OOP_Assignment_4
         }
 
         public DeliveryAddress Destination { get; }
-        public virtual double EstimatedCost => DeliveryFee + (Weight * 5);
+        public abstract double EstimatedCost { get; }
 
         public void UpdateDeliveryFee(double newFee)
         {
@@ -78,13 +78,8 @@ namespace G_NET68_OOP_Assignment_4
                 deliveryFee = newFee;
         }
 
-        public virtual void PrintShipment()
-        {
-            Console.WriteLine(
-                $"\nTracking Code: {trackingCode}\n Description: {Description}\n Weight: {weight}\n DeliveryFee: {deliveryFee}\n Destination: {Destination}\n EstimatedCost: {EstimatedCost}"
-                );
-            Console.WriteLine("-------------------------------------------------");
-        }
+        public abstract void PrintShipment();
+     
 
         public void UpdateWeight(double weight)
         {

@@ -37,11 +37,15 @@ namespace G_NET68_OOP_Assignment_4
                     throw new ArgumentException("Value must be non-negative number");
             }
         }
-        public override double EstimatedCost => base.EstimatedCost + CustomsFee;
+        public override double EstimatedCost => DeliveryFee + (Weight * 5) + CustomsFee;
 
         public override void PrintShipment()
         {
-            base.PrintShipment();
+            Console.WriteLine(
+                    $"\nTracking Code: {TrackingCode}\n Description: {Description}\n Weight: {Weight}\n DeliveryFee: " +
+                    $"{DeliveryFee}\n Destination: {Destination}\n EstimatedCost: {EstimatedCost}"
+                    );
+
             Console.WriteLine($"Destination country: {DestinationCountry}\n Custom Fee: {CustomsFee}");
         }
 
