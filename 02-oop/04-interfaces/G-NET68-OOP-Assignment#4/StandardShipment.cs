@@ -4,7 +4,7 @@ using System.Text;
 
 namespace G_NET68_OOP_Assignment_4
 {
-    internal class StandardShipment : Shipment, ITrackable
+    internal class StandardShipment : Shipment, ITrackable, IInsurable
     {
         public StandardShipment(string trackingCode, string description, double weight, double deliveryFee, string city, string street, int buildingNumber)
              : base(trackingCode, description, weight, deliveryFee, city, street, buildingNumber)
@@ -13,6 +13,11 @@ namespace G_NET68_OOP_Assignment_4
         }
 
         public override double EstimatedCost=> DeliveryFee + (Weight * 5);
+
+        public double CalculateInsurance()
+        {
+            return  EstimatedCost * 0.05;
+        }
 
         public string GetTrackingStatus()
         {
