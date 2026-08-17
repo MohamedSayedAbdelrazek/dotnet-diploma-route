@@ -34,6 +34,74 @@
             #endregion
 
 
+            DeliveryCenter dc = new DeliveryCenter(3);
+
+            Console.WriteLine("==========================================");
+            Console.WriteLine("Delivery Center");
+            Console.WriteLine("==========================================");
+
+            //1. Standard Shipment 
+            Console.WriteLine("\nStandard Shipment ");
+            Console.Write("Tracking Code: ");
+            string stdCode = Console.ReadLine();
+            Console.Write("Description: ");
+            string stdDesc = Console.ReadLine();
+            Console.Write("Estimated Cost: ");
+            double estimatedCost = double.Parse(Console.ReadLine());
+            StandardShipment standardShipment = new StandardShipment(stdCode, stdDesc, 100, 100, "Cairo", "Cairo", 10);
+            dc.AddShipment(standardShipment);
+            Console.WriteLine("Shipment Added Successfully.");
+
+            //2. Express Shipment
+            Console.WriteLine("\nExpress Shipment ");
+            Console.Write("Tracking Code: ");
+            string expCode = Console.ReadLine();
+            Console.Write("Description: ");
+            string expDesc = Console.ReadLine();
+            Console.Write("Weight: ");
+            double expWeight = double.Parse(Console.ReadLine());
+            Console.Write("Delivery Fee: ");
+            double expFee = double.Parse(Console.ReadLine());
+            Console.Write("Extra Fee: ");
+            double extraFee = double.Parse(Console.ReadLine());
+            DeliveryAddress expAddr = new DeliveryAddress();
+            ExpressShipment eship = new ExpressShipment(expCode,expDesc,expWeight,expFee,"Cairo","Cairo",15,extraFee);
+            dc.AddShipment(eship);
+            Console.WriteLine("Shipment Added Successfully.");
+
+            //3. International Shipment
+            Console.WriteLine("\nInternational Shipment");
+            Console.Write("Tracking Code: ");
+            string intCode = Console.ReadLine();
+            Console.Write("Description: ");
+            string intDesc = Console.ReadLine();
+            Console.Write("Weight: ");
+            double intWeight = double.Parse(Console.ReadLine());
+            Console.Write("Delivery Fee: ");
+            double intFee = double.Parse(Console.ReadLine());
+            Console.Write("Destination Country: ");
+            string country = Console.ReadLine();
+            Console.Write("Customs Fee: ");
+            double customsFee = double.Parse(Console.ReadLine());
+            DeliveryAddress intAddr = new DeliveryAddress();
+            InternationalShipment iship = new InternationalShipment(intCode,intDesc,intWeight,intFee,"Egypt","Cairo",15,country,customsFee);
+            dc.AddShipment(iship);
+            Console.WriteLine("Shipment Added Successfully.");
+
+
+            dc.PrintAllShipments();
+
+            dc.PrintTrackingStatuses();
+            dc.PrintInsuranceValues();
+
+            ITrackable[] shipments_track = { standardShipment, eship, iship };
+            IInsurable[] shipments_Insure = { standardShipment, eship, iship };
+
+            foreach(ITrackable track in shipments_track)
+                Console.WriteLine(track.GetTrackingStatus());
+
+            foreach(IInsurable insure in shipments_Insure)
+                Console.WriteLine(insure.CalculateInsurance());
         }
     }
 }
