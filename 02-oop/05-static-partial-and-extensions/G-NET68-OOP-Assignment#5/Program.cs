@@ -86,6 +86,28 @@
 
             #endregion
 
+            #region Part01-Q5
+            /*
+             Q5 Partial Classes and Partial Methods
+
+                a) What is a Partial Class?
+                    - A partial class allows a class to be split across multiple source files. 
+                      At compile time, the compiler combines the parts into one type.
+
+                b) Why would a developer split one class into multiple files?
+                    - A developer may split a class into multiple files to organize a large class, separate generated code from handwritten code,
+                      or allow multiple developers to work on different parts of the same type.
+
+                c) What is a Partial Method?
+                    - A partial method is a method declared in one part of a partial type and optionally implemented in another part of that same partial type.
+
+                d) What happens if a declared partial method has no implementation?
+                    - For an optional partial method that follows the applicable rules,
+                      the compiler can remove the method declaration and calls to it
+                      from the compiled code.
+             */
+            #endregion
+
 
         }
     }
