@@ -65,6 +65,28 @@
             */
             #endregion
 
+            #region Part01-Q4
+
+            /*
+             Q4 Extension Methods
+                a) What is an Extension Method?
+                    - Extension methods let you "add" new methods to existing types without modifying the original type or creating a new derived type.
+
+                b) What keyword must be used in the first parameter of an extension method? 
+                    - this keyword
+
+                c) Where must an extension method be declared?
+                    - Extension methods must be declared as static methods inside a static, non-nested class.
+
+                d) Can an extension method access private members of the class it extends?
+                    -   No. An extension method does not become a member of the extended type, 
+                        so it cannot directly access its private members.
+
+             */
+
+            #endregion
+
+
         }
     }
 }
