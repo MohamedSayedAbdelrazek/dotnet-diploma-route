@@ -146,46 +146,52 @@
 
             #region Part02-Q3
 
-            Shipment shipment1 = new StandardShipment(
-                "sh01",
-                "description01",
-                10,
-                10,
-                "Cairo",
-                "street01",
-                10
-            );
+            //Shipment shipment1 = new StandardShipment(
+            //    "sh01",
+            //    "description01",
+            //    10,
+            //    10,
+            //    "Cairo",
+            //    "street01",
+            //    10
+            //);
 
-            Shipment shipment02 = shipment1.DeepCopy();
+            //Shipment shipment02 = shipment1.DeepCopy();
 
-            Console.WriteLine("Before Change");
+            //Console.WriteLine("Before Change");
 
-            Console.WriteLine($"Original: {shipment1.Destination}");
-            Console.WriteLine($"Copied:   {shipment02.Destination}");
+            //Console.WriteLine($"Original: {shipment1.Destination}");
+            //Console.WriteLine($"Copied:   {shipment02.Destination}");
 
-            Console.WriteLine(
-                $"Same Shipment object? " +
-                $"{ReferenceEquals(shipment1, shipment02)}"
-            );
+            //Console.WriteLine(
+            //    $"Same Shipment object? " +
+            //    $"{ReferenceEquals(shipment1, shipment02)}"
+            //);
 
-            Console.WriteLine(
-                $"Same DeliveryAddress object? " +
-                $"{ReferenceEquals(shipment1.Destination, shipment02.Destination)}"
-            );
+            //Console.WriteLine(
+            //    $"Same DeliveryAddress object? " +
+            //    $"{ReferenceEquals(shipment1.Destination, shipment02.Destination)}"
+            //);
 
-            shipment02.Destination.City = "Giza";
+            //shipment02.Destination.City = "Giza";
 
-            Console.WriteLine("\nAfter changing copied address");
+            //Console.WriteLine("\nAfter changing copied address");
 
-            Console.WriteLine($"Original: {shipment1.Destination}");
-            Console.WriteLine($"Copied:   {shipment02.Destination}");
+            //Console.WriteLine($"Original: {shipment1.Destination}");
+            //Console.WriteLine($"Copied:   {shipment02.Destination}");
 
-            Console.WriteLine(
-                $"Same DeliveryAddress object? " +
-                $"{ReferenceEquals(shipment1.Destination, shipment02.Destination)}"
-            );
+            //Console.WriteLine(
+            //    $"Same DeliveryAddress object? " +
+            //    $"{ReferenceEquals(shipment1.Destination, shipment02.Destination)}"
+            //);
 
             #endregion
+
+            #region Part02- Q4 & Q5 & Q6
+            //Console.WriteLine($"Total Shipments: {Shipment.GetTotalShipmentsCreated()}");
+
+            #endregion
+
 
 
         }

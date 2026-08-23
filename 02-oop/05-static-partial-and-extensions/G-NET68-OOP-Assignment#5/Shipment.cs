@@ -6,7 +6,7 @@ namespace G_NET68_OOP_Assignment_4
 {
     internal abstract class Shipment
     {
-
+        public static int TotalShipmentsCreated;
         private string trackingCode;
         private string description;
         private double weight;
@@ -19,7 +19,7 @@ namespace G_NET68_OOP_Assignment_4
             weight = 1;
             deliveryFee = 50;
             Destination = default;
-
+            TotalShipmentsCreated++;
         }
 
         public Shipment(string trackingCode, string description, double weight, double deliveryFee, string city, string street, int buldingNumber)
@@ -29,8 +29,19 @@ namespace G_NET68_OOP_Assignment_4
             this.weight = weight;
             this.deliveryFee = deliveryFee;
             Destination = new DeliveryAddress(city, street, buldingNumber);
+            TotalShipmentsCreated++;
         }
 
+        static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Static initialization has happened.");
+        }
+
+        public static int GetTotalShipmentsCreated()
+        { 
+            return TotalShipmentsCreated;
+        }
         public string TrackingCode => trackingCode;
 
         public string Description
