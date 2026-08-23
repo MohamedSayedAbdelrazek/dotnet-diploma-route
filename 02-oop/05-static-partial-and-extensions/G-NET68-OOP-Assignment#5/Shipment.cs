@@ -69,7 +69,7 @@ namespace G_NET68_OOP_Assignment_4
             }
         }
 
-        public DeliveryAddress Destination { get; }
+        public DeliveryAddress Destination { get; set; }
         public abstract double EstimatedCost { get; }
 
         public void UpdateDeliveryFee(double newFee)
@@ -100,6 +100,12 @@ namespace G_NET68_OOP_Assignment_4
 
         public Shipment ShallowCopy() {
             return (Shipment)this.MemberwiseClone();
+        }
+
+        public Shipment DeepCopy() {
+            Shipment ship = (Shipment)this.MemberwiseClone();
+            ship.Destination = new DeliveryAddress(this.Destination.City, this.Destination.Street, this.Destination.BuildingNumber);
+            return ship;
         }
 
     }
