@@ -108,6 +108,26 @@
              */
             #endregion
 
+            #region Part02-Q1
+            //Shipment shipment1 = new StandardShipment("sh01", "description01", 10, 10, "Cairo", "street01", 10);
+
+            //// Reference assignment
+            //Shipment shipment2 = shipment1;
+
+            //shipment2.Weight = 50;
+
+            //Console.WriteLine($"shipment1 weight: {shipment1.Weight}");
+            //Console.WriteLine($"shipment2 weight: {shipment2.Weight}");
+
+            //// Actual copy
+            //Shipment shipment3 = shipment1.CopyShipment();
+
+            //shipment3.Weight = 100;
+
+            //Console.WriteLine($"shipment1 weight: {shipment1.Weight}");
+            //Console.WriteLine($"shipment3 weight: {shipment3.Weight}"); 
+            #endregion
+
 
         }
     }

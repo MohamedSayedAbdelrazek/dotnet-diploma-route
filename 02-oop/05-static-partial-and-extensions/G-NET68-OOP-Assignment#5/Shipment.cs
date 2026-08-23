@@ -91,6 +91,11 @@ namespace G_NET68_OOP_Assignment_4
             Weight = weight + extraPackingWeight;
         }
 
+        public Shipment CopyShipment() 
+        {
+            return (Shipment)this.MemberwiseClone();
+        
+        }
     }
 
 }
