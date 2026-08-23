@@ -96,6 +96,12 @@ namespace G_NET68_OOP_Assignment_4
             return (Shipment)this.MemberwiseClone();
         
         }
+
+
+        public Shipment ShallowCopy() {
+            return (Shipment)this.MemberwiseClone();
+        }
+
     }
 
 }

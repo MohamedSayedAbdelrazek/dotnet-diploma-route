@@ -128,7 +128,21 @@
             //Console.WriteLine($"shipment3 weight: {shipment3.Weight}"); 
             #endregion
 
+            #region Part02-Q2
+            Shipment shipment1 = new StandardShipment("sh01", "description01", 10, 10, "Cairo", "street01", 10);
 
+            Shipment shipment02 = shipment1.ShallowCopy();
+
+            Console.WriteLine("Before Change");
+            Console.WriteLine(shipment1.Destination);
+            Console.WriteLine(shipment02.Destination);
+
+            shipment02.Destination.City = "Giza";
+
+            Console.WriteLine("After Change");
+            Console.WriteLine(shipment1.Destination);
+            Console.WriteLine(shipment02.Destination);
+            #endregion
         }
     }
 }
