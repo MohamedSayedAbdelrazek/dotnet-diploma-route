@@ -200,6 +200,170 @@ namespace G_NET68_OOP_Assignment_4
             //DeliveryUtilities.PrintSeparator();
             #endregion
 
+            #region Main Functionality
+            DeliveryUtilities.PrintSeparator();
+            DeliveryUtilities.PrintSystemTitle();
+            DeliveryUtilities.PrintSeparator();
+
+            StandardShipment shipment1 =
+                new StandardShipment(
+               "SH001",
+               "Standard shipment",
+               3,
+               10,
+               "Cairo",
+               "Street 1",
+               10
+           );
+
+        ExpressShipment shipment2 =
+            new ExpressShipment(
+                "SH002",
+                "Express shipment",
+                2,
+                10,
+                "Cairo",
+                "Street 2",
+                20,
+            100
+            );
+
+        InternationalShipment shipment3 =
+            new InternationalShipment(
+                "SH003",
+                "International shipment",
+                8,
+                10,
+                "Cairo",
+                "Street 3",
+                30,"Egypt",100
+            );
+
+            Console.WriteLine("Standard Shipment Created");
+            Console.WriteLine("Express Shipment Created");
+            Console.WriteLine("International Shipment Created");
+
+            Console.WriteLine(
+                $"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}"
+            );
+
+            // Object Copying
+            DeliveryUtilities.PrintSeparator();
+            Console.WriteLine("Object Copying");
+            DeliveryUtilities.PrintSeparator();
+
+            // Reference Assignment
+            Shipment assignedShipment = shipment1;
+            Console.WriteLine($"Original Shipment : {shipment1.TrackingCode}");
+            Console.WriteLine($"Assigned Shipment : {assignedShipment.TrackingCode}");
+            Console.WriteLine(
+                $"Same Object : {ReferenceEquals(shipment1, assignedShipment)}"
+            );
+
+
+            // Shallow Copy          
+            DeliveryUtilities.PrintSeparator();
+            Console.WriteLine("Shallow Copy");
+            DeliveryUtilities.PrintSeparator();
+
+            Shipment shallowCopy = shipment1.ShallowCopy();
+
+            Console.WriteLine(
+                $"Original Shipment Address : {shipment1.Destination.City}"
+            );
+
+            Console.WriteLine(
+                $"Copied Shipment Address : {shallowCopy.Destination.City}"
+            );
+
+            Console.WriteLine("Changing copied shipment address...");
+
+            shallowCopy.Destination.City = "Giza";
+
+            Console.WriteLine(
+                $"Original Shipment Address : {shipment1.Destination.City}"
+            );
+
+            Console.WriteLine(
+                $"Copied Shipment Address : {shallowCopy.Destination.City}"
+            );
+
+            Console.WriteLine(
+                $"Same DeliveryAddress Object : " +
+                $"{ReferenceEquals(shipment1.Destination, shallowCopy.Destination)}"
+            );
+
+
+            
+            // Deep Copy
+            DeliveryUtilities.PrintSeparator();
+            Console.WriteLine("Deep Copy");
+            DeliveryUtilities.PrintSeparator();
+
+            // Restore original address first
+            shipment1.Destination.City = "Cairo";
+
+            Shipment deepCopy = shipment1.DeepCopy();
+
+            Console.WriteLine(
+                $"Original Shipment Address : {shipment1.Destination.City}"
+            );
+
+            Console.WriteLine(
+                $"Copied Shipment Address : {deepCopy.Destination.City}"
+            );
+
+            Console.WriteLine("Changing copied shipment address...");
+
+            deepCopy.Destination.City = "Giza";
+
+            Console.WriteLine(
+                $"Original Shipment Address : {shipment1.Destination.City}"
+            );
+
+            Console.WriteLine(
+                $"Copied Shipment Address : {deepCopy.Destination.City}"
+            );
+
+            Console.WriteLine(
+                $"Same DeliveryAddress Object : " +
+                $"{ReferenceEquals(shipment1.Destination, deepCopy.Destination)}"
+            );
+
+            // Extension Methods
+            DeliveryUtilities.PrintSeparator();
+            Console.WriteLine("Extension Methods");
+            DeliveryUtilities.PrintSeparator();
+
+            Console.WriteLine(shipment1.GetSummary());
+            Console.WriteLine(shipment2.GetSummary());
+            Console.WriteLine(shipment3.GetSummary());
+
+            Console.WriteLine();
+
+            Console.WriteLine(
+                $"SH001 Is Delivered : {shipment1.IsDelivered()}"
+            );
+
+            Console.WriteLine(
+                $"SH003 Is Delivered : {shipment3.IsDelivered()}"
+            );
+
+
+           
+            // Tracking Status
+            DeliveryUtilities.PrintSeparator();
+            Console.WriteLine("Tracking Status");
+            DeliveryUtilities.PrintSeparator();
+            shipment1.TrackingStatus = "Out For Delivery";
+
+            // Partial Method
+            Console.WriteLine("==========================================");
+            Console.WriteLine("Partial Method");
+            Console.WriteLine("==========================================");
+            shipment1.GetTrackingStatus();
+
+            #endregion
         }
     }
 }

@@ -10,8 +10,9 @@ namespace G_NET68_OOP_Assignment_5
             return $"{shipment.TrackingCode} | {shipment.GetType()} | {shipment.Weight} | {shipment.Destination}";
         }
 
-        //internal static bool IsDelivered(this Shipment shipment) {
-        //    return shipment.status == "Deliverd";
-        //}
+        internal static bool IsDelivered(this Shipment shipment)
+        {
+            return shipment.TrackingStatus == "Deliverd";
+        }
     }
 }
