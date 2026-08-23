@@ -119,6 +119,9 @@ namespace G_NET68_OOP_Assignment_4
             return ship;
         }
 
+        partial  void OnTrackingStatusChanged(string newStatus) {
+            Console.WriteLine($"Tracking status changed to:{newStatus} ");
+        }
     }
 
 }

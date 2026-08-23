@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace G_NET68_OOP_Assignment_5
+namespace G_NET68_OOP_Assignment_4
 {
-    internal partial class Shipment
+    internal abstract partial class Shipment
     {
         public string TrackingStatus { get; set; }
 
@@ -12,7 +12,9 @@ namespace G_NET68_OOP_Assignment_5
             return TrackingStatus;
         }
         public void UpdateTrackingStatus(string status) {
-            TrackingStatus = status;
+            OnTrackingStatusChanged(status);
         }
+
+        partial void OnTrackingStatusChanged(string newStatus);
     }
 }
