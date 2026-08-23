@@ -4,7 +4,7 @@ using System.Text;
 
 namespace G_NET68_OOP_Assignment_4
 {
-    internal abstract class Shipment
+    internal abstract partial class Shipment
     {
         public static int TotalShipmentsCreated;
         private string trackingCode;
