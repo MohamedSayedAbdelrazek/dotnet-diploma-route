@@ -14,6 +14,12 @@
             // data types without duplicating the same code for each type.
 
             #endregion
+
+            #region Q2
+            //Container<int> container = new(10);
+            #endregion
+
+
         }
     }
 }
