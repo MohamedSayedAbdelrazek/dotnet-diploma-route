@@ -33,7 +33,25 @@
 
             #endregion
 
+            #region Q4
+            //Q4: What is a generic method? Write Swap<T> method.
+
+            // A generic method is a method that uses one or more type parameters.
+            // We write the method once, and it can work with different data types
+            // without duplicating the same method for each type.
+
+            //string first = "Mohamed", second = "Ahmed";
+            //Swap(ref first, ref second);
+            //Console.WriteLine($"{first} , {second}");
+            #endregion
+
 
         }
+
+        //public static void Swap<T>(ref T first,ref T second){
+        //    T temp = first;
+        //    first= second;
+        //    second = temp;
+        //}
     }
 }
