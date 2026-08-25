@@ -19,6 +19,20 @@
             //Container<int> container = new(10);
             #endregion
 
+            #region Q3
+            // Q3: What are multiple type parameters? Write Pair<TKey,TValue>.
+
+            // Multiple type parameters allow a generic class or method
+            // to work with more than one type at the same time.
+            // Each type parameter can represent a different data type.
+
+            //Example
+            //Pair<string, int> p = new Pair<string,int>("Mohamed", 21);
+            //Console.WriteLine($"{p.First} , {p.Second}");
+
+
+            #endregion
+
 
         }
     }
