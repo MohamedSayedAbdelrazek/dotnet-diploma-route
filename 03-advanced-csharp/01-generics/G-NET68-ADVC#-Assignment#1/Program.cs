@@ -121,6 +121,14 @@
             //var b = new Box<Dog>();
             #endregion
 
+            #region Q13
+            //Q13: What does the 'default' keyword do in generics?
+
+            // The default keyword returns the default value of the type parameter T.
+            // It is useful in generic code because we do not know what T will be.
+
+            #endregion
+
         }
     }
 }
