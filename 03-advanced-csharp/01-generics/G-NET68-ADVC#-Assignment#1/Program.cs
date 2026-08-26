@@ -88,6 +88,15 @@
             //public class Container<T> where T : new() {}
             #endregion
 
+            #region Q10
+            //Q10: What is the interface constraint? Write an example.
+
+            // When the interface constraint is used with Generic, it means that the type parameter must implement this interface.
+
+            //Example
+            //public class Container<T> where T : Icomparable<T> {}
+            #endregion
+
         }
     }
 }
