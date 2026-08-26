@@ -109,6 +109,18 @@
             //var b = new Box<Dog>();
             #endregion
 
+            #region Q12
+            //Q12: How do you apply multiple constraints? Write an example.
+
+            // We can apply multiple constraints with generics by separating
+            // them with commas. The order of some constraints matters.
+
+            //Example
+
+            // public class Box<T> where T : Animal,Icomparable<T>,new() { public T Value { get; set; } }
+            //var b = new Box<Dog>();
+            #endregion
+
         }
     }
 }
