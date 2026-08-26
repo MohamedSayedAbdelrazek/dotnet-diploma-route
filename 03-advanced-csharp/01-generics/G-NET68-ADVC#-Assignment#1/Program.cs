@@ -45,13 +45,12 @@
             //Console.WriteLine($"{first} , {second}");
             #endregion
 
+            #region Q5
+            //int[] items = { 1, 5, 6, 17, 2 };
+            //int max= Utility.FindMax(items);
+            //Console.WriteLine(max);
+            #endregion
 
         }
-
-        //public static void Swap<T>(ref T first,ref T second){
-        //    T temp = first;
-        //    first= second;
-        //    second = temp;
-        //}
     }
 }
