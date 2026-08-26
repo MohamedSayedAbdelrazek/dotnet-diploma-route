@@ -51,6 +51,15 @@
             //Console.WriteLine(max);
             #endregion
 
+            #region Q6
+            //Q6: What is a generic interface? Write IRepository<T>.
+
+            // A generic interface is an interface that uses one or more type parameters.
+            // It is defined once and can be implemented with different types.
+            // The implementing class must implement all members of the interface
+            // using the specified type.
+            #endregion
+
         }
     }
 }
