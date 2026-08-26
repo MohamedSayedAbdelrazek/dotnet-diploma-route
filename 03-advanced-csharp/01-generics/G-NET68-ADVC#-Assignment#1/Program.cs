@@ -77,6 +77,17 @@
             //public class Container<T> where T : class {}
             #endregion
 
+            #region Q9
+            //Q9: What is the 'new()' constraint? Write an example.
+
+            // When the new() constraint is used with generics,
+            // it means that the type parameter must have an accessible
+            // parameterless constructor.
+
+            // Example:
+            //public class Container<T> where T : new() {}
+            #endregion
+
         }
     }
 }
