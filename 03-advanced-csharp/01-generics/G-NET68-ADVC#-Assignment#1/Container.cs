@@ -17,6 +17,14 @@ namespace G_NET68_ADVC__Assignment_1
         public void Add(T item) => _items.Add(item);
         public T? Get() => _items[0];
 
-  
+
+        public T Get(int index)
+        {
+            if (index < 0 || index >= _items.Count)
+                return default;
+
+            return _items[index];
+        }
+
     }
 }
