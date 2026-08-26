@@ -60,6 +60,15 @@
             // using the specified type.
             #endregion
 
-        }
+            #region Q7
+            //Q7: What is the 'struct' constraint? Write an example.
+            // we used struct constraint with Generics to ensure that the parameter type must be a value type.
+
+            // Example:
+            //public class Container<T> where T : struct {}
+           
+            #endregion
+
+    }
     }
 }
