@@ -97,6 +97,18 @@
             //public class Container<T> where T : Icomparable<T> {}
             #endregion
 
+            #region Q11
+            //Q11: What is the base class constraint? Write an example.
+
+            // When a base class constraint is used with generics,
+            // it means that the type parameter must be the specified base class
+            // or must derive from that base class.
+
+            //Example
+            //public class Box<T> where T : Animal { public T Value { get; set; } }
+            //var b = new Box<Dog>();
+            #endregion
+
         }
     }
 }
