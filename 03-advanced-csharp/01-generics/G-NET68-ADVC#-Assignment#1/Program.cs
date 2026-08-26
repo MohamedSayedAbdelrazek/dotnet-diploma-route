@@ -66,9 +66,17 @@
 
             // Example:
             //public class Container<T> where T : struct {}
-           
+
             #endregion
 
-    }
+            #region Q8
+            //Q8: What is the 'class' constraint? Write an example.
+            // We used class constraint with Generics to ensure that the parameter type must be a reference type.
+
+            // Example:
+            //public class Container<T> where T : class {}
+            #endregion
+
+        }
     }
 }
