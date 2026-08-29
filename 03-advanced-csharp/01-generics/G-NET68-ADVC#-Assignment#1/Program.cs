@@ -146,6 +146,11 @@
             //Covariance uses the out keyword and applies to output positions.
             //Contravariance uses the in keyword and applies to input positions.
             #endregion
+
+            #region Q18
+            //Q18: How do static members work in generic types?
+            //In a generic types Each different type argument has its own separate static member and its own stored value.
+            #endregion
         }
     }
 }
