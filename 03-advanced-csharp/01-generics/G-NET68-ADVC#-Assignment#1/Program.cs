@@ -141,6 +141,11 @@
             //The in keyword specifies that a generic type parameter is used only as an input.It enables contravariance and allows the type parameter to be used in parameter positions.
             #endregion
 
+            #region Q17
+            //Q17: What is the difference between covariance and contravariance ?
+            //Covariance uses the out keyword and applies to output positions.
+            //Contravariance uses the in keyword and applies to input positions.
+            #endregion
         }
     }
 }
