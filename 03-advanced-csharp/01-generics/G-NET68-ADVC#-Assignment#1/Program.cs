@@ -1,4 +1,6 @@
-﻿namespace G_NET68_ADVC__Assignment_1
+﻿using System.Reflection.Metadata;
+
+namespace G_NET68_ADVC__Assignment_1
 {
     internal class Program
     {
@@ -150,6 +152,11 @@
             #region Q18
             //Q18: How do static members work in generic types?
             //In a generic types Each different type argument has its own separate static member and its own stored value.
+            #endregion
+
+            #region Q19
+            //Q19: How can you inherit from a generic class?
+            //A class can inherit from a generic class by providing a specific type argument for the generic type parameter.
             #endregion
         }
     }
