@@ -129,6 +129,14 @@
 
             #endregion
 
+            #region Q15
+            //Q15: What is covariance? Explain the 'out' keyword.
+            //Covariance allows a generic type with a more derived type to be assigned to a generic type with a less derived type.
+            //The out keyword specifies that a generic type parameter is used only as an output. It enables covariance and allows the type parameter to be used in return positions.
+            #endregion
+
+
+
         }
     }
 }
