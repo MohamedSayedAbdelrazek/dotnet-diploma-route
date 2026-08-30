@@ -49,5 +49,14 @@ namespace G_NET68_ADVC__Assignment_2
                 result.Add(fun(p));
             return result;
         }
+
+        public static List<Product> FilterProducts(List<Product> products, Predicate<Product> predicate) 
+        { 
+            List<Product>result = new List<Product>();
+            foreach (Product product in products)
+                if (predicate(product))
+                    result.Add(product);
+            return result;
+        }
     }
 }

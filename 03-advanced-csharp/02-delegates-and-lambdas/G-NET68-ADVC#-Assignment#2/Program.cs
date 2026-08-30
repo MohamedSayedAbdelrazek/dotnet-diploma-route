@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System.Collections;
+using System.Numerics;
 using System.Reflection.Metadata.Ecma335;
 
 namespace G_NET68_ADVC__Assignment_2
@@ -43,6 +44,13 @@ namespace G_NET68_ADVC__Assignment_2
             List<string> PriceLabels = Product.TransformProducts(catalog, p => p.Price > 100 ? $"{p.Name}: Expensive!" : $"{p.Name}: Affordable");
             foreach(string s in PriceLabels)
                 Console.WriteLine(s);
+
+            Console.WriteLine("\n--------Low Stock Alert---------");
+            List<Product>LowStockProducts = Product.FilterProducts(catalog, p => p.Stock < 20);
+            foreach(Product product in LowStockProducts)
+            {
+                Console.WriteLine($"[LOW STOCK] {product.Name}: only {product.Stock} left!");
+            }
         }
     }
 }
