@@ -32,6 +32,14 @@ namespace G_NET68_ADVC__Assignment_2
         {
             foreach (Product product in products)
                 Console.WriteLine(product);
-        } 
+        }
+        
+        public static void PrintReport(List<Product>products,Action<Product>action)
+        {
+            foreach(Product product in products)
+            {
+                action(product);
+            }
+        }
     }
 }

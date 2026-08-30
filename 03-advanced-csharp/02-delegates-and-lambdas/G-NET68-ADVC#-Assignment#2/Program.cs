@@ -29,6 +29,11 @@ namespace G_NET68_ADVC__Assignment_2
             Product.PrintProducts(Product.SearchProducts(catalog, p => p.Stock > 0));
             Console.WriteLine("\n--------Clothing under $100---------");
             Product.PrintProducts(Product.SearchProducts(catalog, p => p.Category == "Clothing" && p.Price < 100));
+
+            Console.WriteLine("\n--------Short Report---------");
+            Product.PrintReport(catalog, p => Console.WriteLine($"{p.Name} - ${p.Price:C}"));
+            Console.WriteLine("\n--------Detailed Report---------");
+            Product.PrintReport(catalog, p => Console.WriteLine($"[{p.Category}] {p.Name} | Price: ${p.Price} | Stock: {p.Stock}"));
         }
     }
 }
