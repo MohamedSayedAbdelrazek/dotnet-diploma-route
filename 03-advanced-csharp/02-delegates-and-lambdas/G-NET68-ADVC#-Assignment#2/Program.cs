@@ -34,6 +34,15 @@ namespace G_NET68_ADVC__Assignment_2
             Product.PrintReport(catalog, p => Console.WriteLine($"{p.Name} - ${p.Price:C}"));
             Console.WriteLine("\n--------Detailed Report---------");
             Product.PrintReport(catalog, p => Console.WriteLine($"[{p.Category}] {p.Name} | Price: ${p.Price} | Stock: {p.Stock}"));
+
+            Console.WriteLine("\n--------Summary List---------");
+            List<string>Summary= Product.TransformProducts(catalog, p => $"{p.Name}({p.Price:C})");
+            foreach(string s in Summary)
+                Console.WriteLine(s);
+            Console.WriteLine("\n--------Price Lables---------");
+            List<string> PriceLabels = Product.TransformProducts(catalog, p => p.Price > 100 ? $"{p.Name}: Expensive!" : $"{p.Name}: Affordable");
+            foreach(string s in PriceLabels)
+                Console.WriteLine(s);
         }
     }
 }

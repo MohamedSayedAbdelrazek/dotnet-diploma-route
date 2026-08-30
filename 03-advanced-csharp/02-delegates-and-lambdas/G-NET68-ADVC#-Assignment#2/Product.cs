@@ -41,5 +41,13 @@ namespace G_NET68_ADVC__Assignment_2
                 action(product);
             }
         }
+
+        public static List<string> TransformProducts(List<Product>products,Func<Product,string> fun)
+        {
+            List<string> result = new List<string>();
+            foreach (Product p in products)
+                result.Add(fun(p));
+            return result;
+        }
     }
 }
