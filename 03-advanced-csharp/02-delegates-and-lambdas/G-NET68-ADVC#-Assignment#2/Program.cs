@@ -21,8 +21,14 @@ namespace G_NET68_ADVC__Assignment_2
                 new Product { Id = 10, Name = "Jacket", Category = "Clothing", Price = 120, Stock = 15 }
             };
 
-
-
+            Console.WriteLine("--------Electronics---------");
+            Product.PrintProducts(Product.SearchProducts(catalog, p => p.Category == "Electronics"));
+            Console.WriteLine("\n--------Under 50---------");
+            Product.PrintProducts(Product.SearchProducts(catalog, p => p.Price < 50));
+            Console.WriteLine("\n--------In Stock---------");
+            Product.PrintProducts(Product.SearchProducts(catalog, p => p.Stock > 0));
+            Console.WriteLine("\n--------Clothing under $100---------");
+            Product.PrintProducts(Product.SearchProducts(catalog, p => p.Category == "Clothing" && p.Price < 100));
         }
     }
 }

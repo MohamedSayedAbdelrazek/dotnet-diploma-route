@@ -11,5 +11,27 @@ namespace G_NET68_ADVC__Assignment_2
         public string Category { get; set; }
         public double Price { get; set; }
         public int Stock { get; set; }
+
+        public static List<Product> SearchProducts(List<Product> products, Func<Product, bool> predicate)
+        {
+            List<Product> result = new List<Product>();
+            foreach (Product product in products)
+            {
+                if (predicate(product))
+                    result.Add(product);
+            }
+            return result;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} - {Price:C} (Stock: {Stock})";
+        }
+
+        public static void PrintProducts(List<Product> products)
+        {
+            foreach (Product product in products)
+                Console.WriteLine(product);
+        } 
     }
 }
