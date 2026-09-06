@@ -87,45 +87,78 @@ namespace G_NET68_ADVC__Assignment_3
 
             #region Q3
 
-            Dictionary<string,string> Phone_Book = new Dictionary<string,string>();
-            Phone_Book["Mohamed"] = "01000000001";
+            //Dictionary<string,string> Phone_Book = new Dictionary<string,string>();
+            //Phone_Book["Mohamed"] = "01000000001";
 
-            Phone_Book["Ahmed"] = "01000000002";
+            //Phone_Book["Ahmed"] = "01000000002";
 
-            try{
-                Phone_Book.Add("Mohamed", "01000000003");
-            }
-            catch(Exception e){
-                Console.WriteLine(e.Message);
-            }
+            //try{
+            //    Phone_Book.Add("Mohamed", "01000000003");
+            //}
+            //catch(Exception e){
+            //    Console.WriteLine(e.Message);
+            //}
 
-            if(Phone_Book.TryAdd("Ali", "0123564898"))
-                Console.WriteLine("Ali's phone added successfully.");
-            else
-                Console.WriteLine("Failed to add Ali's phone number.");
+            //if(Phone_Book.TryAdd("Ali", "0123564898"))
+            //    Console.WriteLine("Ali's phone added successfully.");
+            //else
+            //    Console.WriteLine("Failed to add Ali's phone number.");
 
-            // Search for a contact that doesn't exist
-            if (Phone_Book.ContainsKey("Khaled"))
-            {
-                Console.WriteLine("Khaled exists");
-            }
-            else
-            {
-                Console.WriteLine("Khaled does not exist");
-            }
+            //// Search for a contact that doesn't exist
+            //if (Phone_Book.ContainsKey("Khaled"))
+            //{
+            //    Console.WriteLine("Khaled exists");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Khaled does not exist");
+            //}
 
-            // Get a contact with a fallback
-            string phone = Phone_Book.GetValueOrDefault("Khaled", "Not Found");
-            Console.WriteLine("Khaled's phone: " + phone);
+            //// Get a contact with a fallback
+            //string phone = Phone_Book.GetValueOrDefault("Khaled", "Not Found");
+            //Console.WriteLine("Khaled's phone: " + phone);
 
-            // Print all Keys on one line
-            Console.WriteLine("\nKeys:");
-            Console.WriteLine(string.Join(", ", Phone_Book.Keys));
+            //// Print all Keys on one line
+            //Console.WriteLine("\nKeys:");
+            //Console.WriteLine(string.Join(", ", Phone_Book.Keys));
 
-            // Print all Values on another line
-            Console.WriteLine("Values:");
-            Console.WriteLine(string.Join(", ", Phone_Book.Values));
+            //// Print all Values on another line
+            //Console.WriteLine("Values:");
+            //Console.WriteLine(string.Join(", ", Phone_Book.Values));
             #endregion
+
+            #region Q4
+            //HashSet<string> strings = new HashSet<string>(StringComparer.OrdinalIgnoreCase) {
+            //"ahmed@test.com",
+            //"AHMED@test.com",
+            //"sara@test.com",
+            //"Sara@Test.Com"
+            //};
+
+            //Console.WriteLine($"The number of elements is: {strings.Count}");
+
+            //HashSet<int> A = new HashSet<int> { 1, 2, 3, 4, 5 };
+            //HashSet<int> B = new HashSet<int> { 4, 5, 6, 7, 8 };
+
+            //HashSet<int> union =A;
+            //union.UnionWith(B);
+
+            //HashSet<int> intersection = A;
+            //intersection.IntersectWith(B);
+
+            //HashSet<int> except = A;
+            //except.ExceptWith(B);
+
+            //Console.WriteLine($"Union: {string.Join(", ", union)}");
+            //Console.WriteLine($"Intersection: {string.Join(", ", intersection)}");
+            //Console.WriteLine($"Except: {string.Join(", ", except)}");
+
+            //HashSet<int> subset = new HashSet<int> { 1, 2 };
+            //Console.WriteLine($"{{1, 2}} is subset of A: {subset.IsSubsetOf(A)}");
+
+            #endregion
+
+
         }
     }
 }
