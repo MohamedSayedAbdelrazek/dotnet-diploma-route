@@ -1,4 +1,6 @@
-﻿namespace G_NET68_ADVC__Assignment_3
+﻿using System.Linq.Expressions;
+
+namespace G_NET68_ADVC__Assignment_3
 {
     internal class Program
     {
@@ -82,6 +84,48 @@
             //}
             #endregion
 
+
+            #region Q3
+
+            Dictionary<string,string> Phone_Book = new Dictionary<string,string>();
+            Phone_Book["Mohamed"] = "01000000001";
+
+            Phone_Book["Ahmed"] = "01000000002";
+
+            try{
+                Phone_Book.Add("Mohamed", "01000000003");
+            }
+            catch(Exception e){
+                Console.WriteLine(e.Message);
+            }
+
+            if(Phone_Book.TryAdd("Ali", "0123564898"))
+                Console.WriteLine("Ali's phone added successfully.");
+            else
+                Console.WriteLine("Failed to add Ali's phone number.");
+
+            // Search for a contact that doesn't exist
+            if (Phone_Book.ContainsKey("Khaled"))
+            {
+                Console.WriteLine("Khaled exists");
+            }
+            else
+            {
+                Console.WriteLine("Khaled does not exist");
+            }
+
+            // Get a contact with a fallback
+            string phone = Phone_Book.GetValueOrDefault("Khaled", "Not Found");
+            Console.WriteLine("Khaled's phone: " + phone);
+
+            // Print all Keys on one line
+            Console.WriteLine("\nKeys:");
+            Console.WriteLine(string.Join(", ", Phone_Book.Keys));
+
+            // Print all Values on another line
+            Console.WriteLine("Values:");
+            Console.WriteLine(string.Join(", ", Phone_Book.Values));
+            #endregion
         }
     }
 }
