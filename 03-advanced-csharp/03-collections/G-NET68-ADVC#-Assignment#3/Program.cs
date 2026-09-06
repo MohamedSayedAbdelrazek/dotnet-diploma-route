@@ -158,7 +158,42 @@ namespace G_NET68_ADVC__Assignment_3
 
             #endregion
 
+            #region Q5
+            //Queue<string> printQueue = new Queue<string>();
+            //printQueue.Enqueue("Report.pdf");
+            //printQueue.Enqueue("Invoice.pdf");
+            //printQueue.Enqueue("Letter.pdf");
+            //printQueue.Enqueue("Resume.pdf");
+            //printQueue.Enqueue("Photo.pdf");
 
+            //// 1. Print queue contents and Count
+            //Console.WriteLine("Queue:"); 
+            //foreach (string document in printQueue) 
+            //{
+            //    Console.WriteLine(document); 
+            //} 
+            //Console.WriteLine($"Count: {printQueue.Count}"); 
+
+            //// 2. Peek at the next document
+            //Console.WriteLine($"Next document: {printQueue.Peek()}");
+            
+            //// 3. Process the queue
+            //while (printQueue.Count > 0) 
+            //{ 
+            //    string document = printQueue.Dequeue();
+            //    Console.WriteLine($"Printing: {document}");
+            //} 
+            
+            //// 4. TryDequeue on an empty queue
+            //if (printQueue.TryDequeue(out string result)) 
+            //{
+            //    Console.WriteLine($"Printing: {result}");
+            //} 
+            //else 
+            //{ 
+            //    Console.WriteLine("Queue is empty");
+            //}
+            #endregion
         }
     }
 }
