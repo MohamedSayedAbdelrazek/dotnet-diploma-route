@@ -176,14 +176,14 @@ namespace G_NET68_ADVC__Assignment_3
 
             //// 2. Peek at the next document
             //Console.WriteLine($"Next document: {printQueue.Peek()}");
-            
+
             //// 3. Process the queue
             //while (printQueue.Count > 0) 
             //{ 
             //    string document = printQueue.Dequeue();
             //    Console.WriteLine($"Printing: {document}");
             //} 
-            
+
             //// 4. TryDequeue on an empty queue
             //if (printQueue.TryDequeue(out string result)) 
             //{
@@ -193,6 +193,37 @@ namespace G_NET68_ADVC__Assignment_3
             //{ 
             //    Console.WriteLine("Queue is empty");
             //}
+            #endregion
+
+            #region Q6
+            Stack<string> browserHistory = new Stack<string>();
+            browserHistory.Push("google.com");
+            browserHistory.Push("github.com");
+            browserHistory.Push("stackoverflow.com");
+            browserHistory.Push("youtube.com");
+            browserHistory.Push("claude.com");
+
+            // 2. Peek to see the current page
+            Console.WriteLine($"Current page: {browserHistory.Peek()}");
+
+            // 3. Press "back" 3 times using Pop
+            for (int i = 0; i < 3; i++) 
+            { 
+                string page = browserHistory.Pop();
+                Console.WriteLine($"Leaving: {page}"); 
+            }
+
+            // 4. Print the current page
+            Console.WriteLine($"Current page after going back: {browserHistory.Peek()}");
+
+            // 5. Try TryPop on the stack
+            if (browserHistory.TryPop(out string result)) 
+            {
+                Console.WriteLine($"Popped page: {result}");
+            } 
+            else {
+                Console.WriteLine("Stack is empty"); 
+            }
             #endregion
         }
     }
