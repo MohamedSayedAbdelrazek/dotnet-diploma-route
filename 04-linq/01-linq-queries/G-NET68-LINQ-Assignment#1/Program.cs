@@ -9,7 +9,10 @@ namespace G_NET68_LINQ_Assignment_1
             #region Q1
             /*1. Get all products from the "Seafood" category. Print each
                 product's name and price.*/
+            var result = Source.ProductList.Where(product => product.Category == "Seafood").Select(Product => new { Product.ProductName, Product.UnitPrice }).ToList();
 
+            foreach (var product in result)
+                Console.WriteLine(product);
 
             #endregion
 
