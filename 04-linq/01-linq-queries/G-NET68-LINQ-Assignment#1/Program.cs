@@ -109,6 +109,15 @@ namespace G_NET68_LINQ_Assignment_1
             /*10. Using QUERY SYNTAX with a compound from clause, list
                  all orders placed in 1997 or later showing CustomerID and
                  OrderDate.*/
+
+            //var result = from c in Source.CustomerList
+            //             from o in c.Orders
+            //             where o.OrderDate >= new DateTime(1997, 01, 01)
+            //             select new { c.CustomerID, o.OrderDate };
+
+            //foreach (var order in result)
+            //    Console.WriteLine(order);
+
             #endregion
 
             #region Q11
