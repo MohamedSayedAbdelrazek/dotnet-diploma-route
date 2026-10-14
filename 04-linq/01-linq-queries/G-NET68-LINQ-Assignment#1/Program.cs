@@ -50,6 +50,11 @@ namespace G_NET68_LINQ_Assignment_1
             #region Q5
             /*5. Get all products that are in stock (UnitsInStock > 0) and
                 belong to the "Condiments" category.*/
+
+            //var products = Source.ProductList.Where(p => p.UnitsInStock > 0 && p.Category == "Condiments");
+
+            //foreach (var product in products)
+            //    Console.WriteLine(product);
             #endregion
 
             #region Q6
