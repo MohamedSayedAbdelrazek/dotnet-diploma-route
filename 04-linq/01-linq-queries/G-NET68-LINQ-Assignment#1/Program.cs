@@ -64,6 +64,16 @@ namespace G_NET68_LINQ_Assignment_1
                 - StockStatus -> a string: "Available" if UnitsInStock > 0,
                   otherwise "Out of Stock"
                 - Print the result.*/
+
+            //var result = Source.ProductList.Select(p => new
+            //{
+            //    Name = p.ProductName,
+            //    Price = p.UnitPrice,
+            //    StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"
+            //});
+
+            //foreach (var Product in result)
+            //    Console.WriteLine(Product);
             #endregion
 
             #region Q7
