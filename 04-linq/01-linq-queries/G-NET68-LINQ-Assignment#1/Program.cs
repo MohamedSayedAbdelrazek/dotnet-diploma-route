@@ -1,5 +1,6 @@
 ﻿using System.Data.Common;
 using G_NET68_LINQ_Assignment_1.DataSources;
+using G_NET68_LINQ_Assignment_1.Models;
 namespace G_NET68_LINQ_Assignment_1
 {
     internal class Program
@@ -9,16 +10,21 @@ namespace G_NET68_LINQ_Assignment_1
             #region Q1
             /*1. Get all products from the "Seafood" category. Print each
                 product's name and price.*/
-            var result = Source.ProductList.Where(product => product.Category == "Seafood").Select(Product => new { Product.ProductName, Product.UnitPrice }).ToList();
 
-            foreach (var product in result)
-                Console.WriteLine(product);
+            //var result = Source.ProductList.Where(product => product.Category == "Seafood").Select(Product => new { Product.ProductName, Product.UnitPrice }).ToList();
+            //foreach (var product in result)
+            //    Console.WriteLine(product);
 
             #endregion
 
             #region Q2
             /*2. Get a list of only the product names from ProductList. Print
                 each name.*/
+
+            //var productNames = Source.ProductList.Select(p => p.ProductName).ToList();
+            //foreach (var product in productNames)
+            //    Console.WriteLine(product);
+
             #endregion
 
             #region Q3
