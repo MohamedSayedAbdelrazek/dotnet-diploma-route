@@ -30,6 +30,12 @@ namespace G_NET68_LINQ_Assignment_1
             #region Q3
             /*3. Sort all products by UnitPrice (ascending). Print each
                 product's name and price.*/
+
+            //var result = Source.ProductList.OrderBy(p => p.UnitPrice).Select(p => new { p.ProductName, p.UnitPrice });
+            //foreach (var product in result)
+            //    Console.WriteLine(product);
+
+
             #endregion
 
             #region Q4
