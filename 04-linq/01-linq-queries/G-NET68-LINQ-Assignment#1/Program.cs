@@ -130,8 +130,16 @@ namespace G_NET68_LINQ_Assignment_1
             #region Q12
             /*12. Sort first by word length and then by a
                  case-insensitive sort of the words in an array.
+            */
 
-                 String[] Arr = {"aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry"};*/
+           // String[] Arr = {"aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry"};
+
+           //var result = Arr.OrderBy(s => s.Length)
+           //                 .ThenBy(s=>s,StringComparer. OrdinalIgnoreCase);
+
+           // foreach (var word in result)
+           //     Console.WriteLine(word);
+
             #endregion
 
             #region Q13
