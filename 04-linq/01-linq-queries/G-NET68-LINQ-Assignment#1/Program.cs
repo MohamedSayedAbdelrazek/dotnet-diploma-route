@@ -40,6 +40,11 @@ namespace G_NET68_LINQ_Assignment_1
 
             #region Q4
             /*4. Get all products where UnitPrice is between 10 and 30*/
+
+            //var products = Source.ProductList.Where(product => product.UnitPrice is >= 10 and <= 30).ToList();
+            //foreach (var product in products)
+            //    Console.WriteLine(product);
+
             #endregion
 
             #region Q5
