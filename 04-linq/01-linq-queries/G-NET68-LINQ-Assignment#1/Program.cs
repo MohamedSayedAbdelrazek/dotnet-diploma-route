@@ -122,9 +122,9 @@ namespace G_NET68_LINQ_Assignment_1
 
             #region Q11
             /*11. Show position number alongside ProductName*/
-            var result = Source.ProductList.Select((p, i) => $"{i + 1}. {p.ProductName}");
-            foreach (var product in result)
-                Console.WriteLine(product);
+            //var result = Source.ProductList.Select((p, i) => $"{i + 1}. {p.ProductName}");
+            //foreach (var product in result)
+            //    Console.WriteLine(product);
             #endregion
 
             #region Q12
