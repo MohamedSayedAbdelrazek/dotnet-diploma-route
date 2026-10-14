@@ -132,13 +132,13 @@ namespace G_NET68_LINQ_Assignment_1
                  case-insensitive sort of the words in an array.
             */
 
-           // String[] Arr = {"aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry"};
+            // String[] Arr = {"aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry"};
 
-           //var result = Arr.OrderBy(s => s.Length)
-           //                 .ThenBy(s=>s,StringComparer. OrdinalIgnoreCase);
+            //var result = Arr.OrderBy(s => s.Length)
+            //                 .ThenBy(s=>s,StringComparer. OrdinalIgnoreCase);
 
-           // foreach (var word in result)
-           //     Console.WriteLine(word);
+            // foreach (var word in result)
+            //     Console.WriteLine(word);
 
             #endregion
 
@@ -146,6 +146,17 @@ namespace G_NET68_LINQ_Assignment_1
             /*13. Create a list of all digits in the array whose second
                  letter is 'i' that is reversed from the order in the
                  original array.*/
+
+            //String[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+            //var result = Arr
+            //    .Reverse()
+            //    .Where(s => s[1] == 'i')
+            //    .ToList();
+
+            //foreach (var word in result)
+            //    Console.WriteLine(word);
+
             #endregion
         }
     }
