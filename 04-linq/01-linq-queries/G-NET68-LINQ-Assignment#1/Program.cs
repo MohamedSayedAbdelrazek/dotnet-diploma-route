@@ -97,6 +97,12 @@ namespace G_NET68_LINQ_Assignment_1
             #region Q9
             /*9. Get all products from the "Beverages" category, sorted by
                 UnitsInStock descending. Print name and stock.*/
+
+            //var result = Source.ProductList.Where(p => p.Category == "Beverages")
+            //    .OrderByDescending(p => p.UnitsInStock)
+            //    .Select(p => new { p.ProductName, p.UnitsInStock });
+            //foreach (var product in result)
+            //    Console.WriteLine(product);
             #endregion
 
             #region Q10
