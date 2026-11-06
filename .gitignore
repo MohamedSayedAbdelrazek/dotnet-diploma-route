@@ -1,0 +1,10 @@
+# Build output and IDE files for every project in this repository
+[Bb]in/
+[Oo]bj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userprefs
+TestResults/
